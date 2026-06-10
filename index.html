@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f2f5f9">
+  <title>MyCal 銷售頁 HTML 區塊示意</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="demo-tools" aria-label="示意稿工具">
+    <strong>工程示意</strong>
+    <span>黃色框內為新增 HTML 區塊</span>
+  </aside>
+
+  <main class="store">
+    <section class="store-hero">
+      <img
+        class="store-banner"
+        src="https://mycal.tw/storage/shops/banners/sZWldbc1jCxF2s4ZTEZI9LYNbo6G1jKQx2gjUidN.png"
+        alt="里長伯逗燒報"
+      >
+
+      <article class="profile-card">
+        <img
+          class="store-avatar"
+          src="https://mycal.tw/storage/shops/logos/fd6JzW24yDgLSB4e2hwYgeHRuXp3frhNMqL4FCWh.png"
+          alt="Vic Lin"
+        >
+        <h1>里長伯逗燒報</h1>
+        <p class="owner"><span aria-hidden="true">▣</span> Vic Lin</p>
+        <div class="rule"></div>
+        <p class="store-description">不用申請信用卡金流或驗證！如果你只是需要一個微型商店幫你處理訂單，讓你快速擁有微型商店。</p>
+      </article>
+    </section>
+
+    <!--
+      工程需求重點：
+      此 custom-html-slot 位於「店家資料」與「商品列表」中間。
+      後台可用 Rich Text / HTML Editor 儲存內容，前台依排序渲染。
+    -->
+    <section class="custom-html-slot" id="custom-html-slot">
+      <div class="slot-toolbar">
+        <div class="slot-label">新增功能：自訂 HTML 銷售內容區</div>
+        <button id="edit-toggle" type="button">編輯示意</button>
+      </div>
+
+      <div class="sales-content" id="sales-content">
+        <div class="sales-hero">
+          <img
+            src="https://mycal.tw/storage/products/images/WEcH7szz8tNTayUgDhB9yXxIqUkBSucnJvVladub.png"
+            alt="十味麻成香"
+          >
+          <div class="sales-hero-copy">
+            <p class="eyebrow">2026 全新視覺上市</p>
+            <h2>一匙入魂<br>十種香氣一次到位</h2>
+            <p>麻、辣、香，層層堆疊。讓每天的家常菜，立刻變成讓人停不下來的招牌料理。</p>
+            <a href="#products" class="sales-cta">立即選購</a>
+          </div>
+        </div>
+
+        <div class="sales-intro editable">
+          <p class="eyebrow dark">日舒醒｜十味麻成香</p>
+          <h2>不是只有辣<br>是有層次的香</h2>
+          <p>嚴選十種辛香料，以不搶食材原味的比例調和。入口先聞到溫潤香氣，接著微麻、回甘，最後才是舒服的辣。</p>
+        </div>
+
+        <div class="feature-photo">
+          <img
+            src="https://mycal.tw/storage/products/images/9f57QcLTXooeapri0rmadQlcIkuEafIWHgxyBsCf.png"
+            alt="佐餐情境"
+          >
+          <div class="photo-caption editable">
+            <span>01</span>
+            <h3>拌、沾、炒、撒<br>一罐搞定</h3>
+          </div>
+        </div>
+
+        <div class="benefit-grid editable">
+          <article>
+            <strong>10</strong>
+            <h3>十種辛香料</h3>
+            <p>香氣飽滿，不只追求單一辣度。</p>
+          </article>
+          <article>
+            <strong>0</strong>
+            <h3>純素配方</h3>
+            <p>簡單成分，蔬食料理也能放心搭配。</p>
+          </article>
+          <article>
+            <strong>3秒</strong>
+            <h3>快速升級</h3>
+            <p>撒上一匙，日常料理立刻更有記憶點。</p>
+          </article>
+        </div>
+
+        <div class="quote-block editable">
+          <span class="quote-mark">“</span>
+          <p>真正好吃的辣，不是讓人只記得痛，而是吃完還想再來一口。</p>
+          <small>里長伯的調味堅持</small>
+        </div>
+
+        <div class="how-to editable">
+          <p class="eyebrow dark">簡單三步驟</p>
+          <h2>今天，想怎麼吃？</h2>
+          <ol>
+            <li><span>1</span><div><strong>打開</strong><small>香氣現磨般撲鼻</small></div></li>
+            <li><span>2</span><div><strong>撒上</strong><small>依照喜好調整份量</small></div></li>
+            <li><span>3</span><div><strong>開吃</strong><small>白飯、拌麵、火鍋都適合</small></div></li>
+          </ol>
+        </div>
+
+        <div class="sales-end editable">
+          <p>一罐放在廚房</p>
+          <h2>每一餐都多一點期待</h2>
+          <a href="#products" class="sales-cta light">前往商品列表</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <header class="section-heading">
+        <h2>商品列表</h2>
+        <span></span>
+      </header>
+
+      <nav class="store-actions" aria-label="商店功能">
+        <a href="#">🎓&nbsp; 線上課程</a>
+        <a class="cart-link" href="#">🛒&nbsp; 購物車 <span>0</span></a>
+      </nav>
+
+      <div class="product-list">
+        <article class="product-card">
+          <img src="https://mycal.tw/storage/products/images/WEcH7szz8tNTayUgDhB9yXxIqUkBSucnJvVladub.png" alt="十味麻成香">
+          <div class="product-body">
+            <h3>【日舒醒】十味麻成香《最受歡迎靈魂香辣粉！2026新視覺上市》純素可</h3>
+            <p>十種香氣層層堆疊，拌麵、火鍋、燒烤都適合。</p>
+            <div class="product-rule"></div>
+            <strong class="price">NT$ 160 - NT$ 350</strong>
+            <span class="stock">▱&nbsp; 多規格</span>
+            <div class="buy-row">
+              <input type="number" value="1" min="1" aria-label="購買數量">
+              <button type="button">🛒&nbsp; 選擇規格</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://mycal.tw/storage/products/images/9f57QcLTXooeapri0rmadQlcIkuEafIWHgxyBsCf.png" alt="火星糖">
+          <div class="product-body">
+            <h3>【火星糖】家庭號大包裝《地球上最好吃的糖果》</h3>
+            <p>把所有頂級食材集結在一起，濃郁焦糖香與堅果完美搭配。</p>
+            <div class="product-rule"></div>
+            <strong class="price">NT$ 450</strong>
+            <span class="stock">▰&nbsp; 庫存 9</span>
+            <div class="buy-row">
+              <input type="number" value="1" min="1" aria-label="購買數量">
+              <button type="button">🛒&nbsp; 加入購物車</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="share-card">
+      <p>分享商店</p>
+      <div>
+        <button class="line" type="button">LINE</button>
+        <button class="facebook" type="button">Facebook</button>
+      </div>
+      <button class="copy" type="button">🔗&nbsp; 複製連結</button>
+    </section>
+
+    <footer>本頁由 <strong>MyCal</strong> 提供</footer>
+  </main>
+
+  <a class="floating-cart" href="#products">🛒 <span>購物車</span><b>0</b></a>
+  <script src="script.js"></script>
+</body>
+</html>
